@@ -1,4 +1,4 @@
-APP_NAME = template
+APP_NAME = microservice
 
 init:
 	chmod +x .githooks
