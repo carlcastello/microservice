@@ -15,6 +15,9 @@ init:
 build:
 	cat .env/${environment} > .flaskenv
 
+test:
+	python3 -m unittest discover -v
+
 install:
 	pip install -r requirements/${environment}.txt
 
