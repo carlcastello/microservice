@@ -1,3 +1,5 @@
+import logging
+
 from flask_restful import Resource
 
 from .services import Service
@@ -9,4 +11,5 @@ class Api(Resource):
         self._service: Service = service
 
     def get(self, user_id: str):
+        logging.warning('Hello World')
         return self._service.hello_world(user_id)
