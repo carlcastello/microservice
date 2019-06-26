@@ -22,4 +22,5 @@ install:
 	pip install -r requirements/${environment}.txt
 
 run:
+	# set for windows.
 	export FLASK_APP=${APP_NAME} && flask run --port 8000

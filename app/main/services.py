@@ -1,6 +1,11 @@
+from .models import User
+
+
 class Service:
+
     def __init__(self):
         pass
 
     def hello_world(self, user_id: str):
-        return f'hello {user_id}'
+        user: User = User.query.get(user_id)
+        return f'hello {user.first_name} {user.last_name}'
