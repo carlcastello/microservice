@@ -8,7 +8,7 @@ APP_NAME = microservice
 git-init:
 	git config core.hooksPath .githooks
 
-project-init:
+init:
 	export FLASK_APP=${APP_NAME} 
 
 init-windows:
