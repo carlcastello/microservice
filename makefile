@@ -12,7 +12,7 @@ init:
 	export FLASK_APP=${APP_NAME} 
 
 init-windows:
-	set FLASK_APP=${APP_NAME} 
+	set FLASK_APP=${APP_NAME}
 
 test:
 	python3 -m unittest discover -v
