@@ -17,7 +17,10 @@ def create_app(config_name: str) -> Flask:
     register_extensions(flask_app)
 
     # Route Blue prints
-    from app.main import get_routes_blueprint
-    flask_app.register_blueprint(get_routes_blueprint(), url_prefix='')
+    from app.main import get_routes_blueprint as main_blueprint
+    flask_app.register_blueprint(main_blueprint(), url_prefix='/user')
+
+    from app.graphql import get_routes_blueprint as graphql_blueprint
+    flask_app.register_blueprint(graphql_blueprint(), url_prefix='/graphql')
 
     return flask_app
