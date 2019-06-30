@@ -2,13 +2,16 @@
 from flask_restful import HTTPException
 from typing import Dict, Union
 
+
 ERRORS: Dict[str, Dict[str, Union[int, str]]] = {
-    "NoIdException": {
-        "message": "Id is required",
-        "status": 400
+    "NoUserException": {
+        "status": 404
     }
 }
 
 
-class NoIdException(HTTPException):
-    code: int = 400
+class NoUserException(HTTPException):
+    code: int = 404
+
+    def __init__(self, user_id: str):
+        super().__init__(f'User with id "{user_id}" does not exit."')
