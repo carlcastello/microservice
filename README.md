@@ -4,7 +4,7 @@
 
 ## System Installation
   1. Make sure that your operating system can execute [make commands](https://www.gnu.org/software/make/manual/make.html)
-  2. Download any python virtual environment manager e.i. [virtualenv](), [virtualenvwrapper](), [conda]()
+  2. Download any python virtual environment manager e.i. [virtualenv](https://virtualenv.pypa.io/en/latest/), [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/latest/), [conda](https://docs.conda.io/en/latest/)
 
 
 ## Project Installation
