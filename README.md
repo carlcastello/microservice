@@ -25,9 +25,9 @@
       PROD_DB_HOST={db_host}
       PROD_DB_AUTH={db_username}:{db_password} 
      ```
-  3. `make install environment=develop/staging/production` (this installs the python requirements). 
-  4. `make init` (this will initialize flask variables and )
-  5. Optional. `flask db init` (execute if the `migrations` folder does not exist)
+  3. Execute install dependencies by executing `make install`
+  4. Export the app name using `export FLASK_APP=${APP_NAME}.py`
+  6. Optional. `flask db init` (execute if the `migrations` folder does not exist)
 
 
 ## Database Operations
@@ -46,7 +46,8 @@
 
 ## Running the Project
 #### Locally
-  `make run`
+  1. `export FLASK_APP={app_name}`
+  2. `flask run [--port=8000]`
 
 ## Running Test
   `make test`
