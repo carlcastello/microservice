@@ -8,17 +8,11 @@ APP_NAME = microservice
 git-init:
 	git config core.hooksPath .githooks
 
-init:
-	export FLASK_APP=${APP_NAME} 
-
-init-windows:
-	set FLASK_APP=${APP_NAME}
-
 test:
 	python3 -m unittest discover -v
 
 install:
-	pip install -r requirements/${environment}.txt
+	pipenv install --dev
 
 migrate:
 	flask db migrate
@@ -28,6 +22,3 @@ upgrade:
 
 downgrade:
 	flask db downgrade
-
-run:
-	flask run --port 8000
